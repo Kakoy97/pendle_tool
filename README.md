@@ -127,17 +127,6 @@ TELEGRAM_BOT_CHAT_ID=-1001234567890
 # 项目过滤配置：最小 24h 交易量（美元），低于此值的项目会被过滤
 # 默认值：3000
 PROJECT_MIN_VOLUME_24H=3000
-
-# 代理配置（如果需要代理访问 Telegram）
-# TELEGRAM_PROXY_TYPE=mtproxy  # 或 socks5, http
-# TELEGRAM_PROXY_HOST=your_proxy_host
-# TELEGRAM_PROXY_PORT=your_proxy_port
-# TELEGRAM_PROXY_USERNAME=your_proxy_username
-# TELEGRAM_PROXY_PASSWORD=your_proxy_password
-# TELEGRAM_PROXY_SECRET=your_proxy_secret  # MTProxy 专用
-
-# 数据库配置（可选，默认使用 SQLite）
-# DATABASE_URL=sqlite+aiosqlite:///./pendle_tool.db
 ```
 
 ## 数据库初始化
