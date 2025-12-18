@@ -226,19 +226,6 @@ uvicorn app.main:app --reload
 - 手动运行初始化脚本：`python -m scripts.init_db`
 - 删除旧的数据库文件重新初始化（注意：会丢失所有数据）
 
-### 4. 前端页面无法访问
-
-**问题**：访问 http://127.0.0.1:8000/ 显示错误
-
-**解决**：
-- 确保 `backend/frontend` 目录存在且包含 `index.html`、`app.js`、`styles.css`
-- 检查后端日志是否有错误信息
-
-## 开发说明
-
-### API 文档
-
-启动应用后访问 http://127.0.0.1:8000/docs 查看完整的 API 文档（Swagger UI）。
 
 ### 项目同步
 
