@@ -1,0 +1,1005 @@
+:root {
+  color-scheme: light dark;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, #ffffff, #f1f5f9);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.last-sync-time {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-right: 0.5rem;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+.btn-primary:hover {
+  background: #0ea5e9;
+}
+
+.btn-secondary {
+  background: #e2e8f0;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+}
+
+.btn-secondary:hover {
+  background: #cbd5e1;
+}
+
+.btn-danger {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #dc2626;
+}
+
+.btn-success {
+  background: #10b981;
+  color: white;
+}
+
+.btn-success:hover {
+  background: #059669;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* 标签页样式 */
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid rgba(148, 163, 184, 0.2);
+}
+
+.tab-btn {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  color: #64748b;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+  margin-bottom: -2px;
+}
+
+.tab-btn:hover {
+  color: #1e293b;
+  background: #f1f5f9;
+}
+
+.tab-btn.active {
+  color: #3b82f6;
+  border-bottom-color: #3b82f6;
+  font-weight: 600;
+}
+
+.tab-content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* 项目管理样式 */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.project-section {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.project-section h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #3b82f6;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.75rem;
+  flex: 1;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 0.9rem;
+  min-width: 200px;
+  transition: all 0.2s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.search-input::placeholder {
+  color: #94a3b8;
+}
+
+.project-list {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 100px;
+}
+
+.project-card {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: all 0.2s;
+}
+
+.project-card:hover {
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.1);
+}
+
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+.project-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+.project-symbol {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.project-address {
+  font-family: "Fira Code", "Consolas", "Courier New", monospace;
+  font-size: 0.85rem;
+  color: #64748b;
+  word-break: break-all;
+}
+
+.project-expiry {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin: 0.25rem 0 0 0;
+}
+
+/* 分组管理工具栏 */
+.group-toolbar {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.group-input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 0.95rem;
+}
+
+.group-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+/* 项目分组样式（列表式） */
+.project-group-row {
+  margin-bottom: 0.5rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.project-group-header-row {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: #f8fafc;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 1rem;
+}
+
+.project-group-header-row:hover {
+  background: #f1f5f9;
+}
+
+.project-group-name-row {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3b82f6;
+  min-width: 120px;
+}
+
+.project-group-count-row {
+  color: #64748b;
+  font-size: 0.875rem;
+  min-width: 80px;
+}
+
+.project-group-summary-row {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+  margin-left: auto;
+  margin-right: 1rem;
+  justify-content: flex-end;
+}
+
+.summary-item {
+  font-size: 0.875rem;
+  color: #475569;
+  white-space: nowrap;
+}
+
+.project-group-toggle-row {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  width: 20px;
+  text-align: center;
+}
+
+.project-group-content-row {
+  background: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 项目行样式（列表式） */
+.project-row {
+  border-bottom: 1px solid #f1f5f9;
+  padding: 0.75rem 1rem;
+  transition: background 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.project-row:hover {
+  background: #f8fafc;
+}
+
+.project-row:last-child {
+  border-bottom: none;
+}
+
+.project-row-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.project-row-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 300px;
+}
+
+.project-row-name-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-row-chain {
+  font-size: 0.75rem;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.project-row-metrics {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  min-width: 300px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.metric-item {
+  font-size: 0.875rem;
+  color: #475569;
+  white-space: nowrap;
+}
+
+.project-row-name-link {
+  font-weight: 600;
+  color: #3b82f6;
+  font-size: 0.95rem;
+  min-width: 0;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.project-row-name-link:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.project-row-address {
+  font-family: "Fira Code", "Consolas", "Courier New", monospace;
+  font-size: 0.85rem;
+  color: #64748b;
+  word-break: break-all;
+  flex: 1;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.project-row-expiry {
+  color: #64748b;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.project-row-desc {
+  color: #475569;
+  font-size: 0.85rem;
+}
+
+.project-row-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.project-group-select {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.4rem;
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.project-group-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.btn-small {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+.project-description {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.project-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.project-actions button {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #3b82f6;
+}
+
+.error {
+  color: #f59e0b;
+  grid-column: 1 / -1;
+  padding: 1rem;
+  background: rgba(245, 158, 11, 0.1);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+/* 摘要列表样式 */
+.summary-actions {
+  margin-bottom: 1.5rem;
+}
+
+.summary-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.summary-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.summary-card header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #3b82f6;
+}
+
+.summary-card header p,
+.summary-card footer p {
+  margin: 0.5rem 0 0;
+  color: #64748b;
+}
+
+.summary-body {
+  margin: 1rem 0;
+  background: #f8fafc;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+}
+
+.summary-body pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+  font-family: "Fira Code", "Consolas", "Courier New", monospace;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+/* 价格测试样式 */
+.price-test-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.price-test-status {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.price-test-results {
+  width: 100%;
+}
+
+.price-test-header {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.price-test-header h3 {
+  margin: 0 0 0.5rem 0;
+  color: #3b82f6;
+  font-size: 1.1rem;
+}
+
+.price-test-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.price-test-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.price-test-item {
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.price-test-item.success {
+  border-left: 4px solid #10b981;
+}
+
+.price-test-item.error {
+  border-left: 4px solid #ef4444;
+}
+
+.price-test-item-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.price-test-project-name {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 1rem;
+}
+
+.price-test-chain {
+  font-size: 0.875rem;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.price-test-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.price-test-result {
+  margin: 0;
+  font-size: 1rem;
+  color: #1e293b;
+  font-family: "Fira Code", "Consolas", "Courier New", monospace;
+}
+
+.price-test-apy {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.price-test-error {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #ef4444;
+}
+
+.price-test-aggregator-result {
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: #f8fafc;
+  border-radius: 0.5rem;
+  border-left: 3px solid #3b82f6;
+}
+
+.price-test-aggregator-result.error {
+  background: #fef2f2;
+  border-left-color: #ef4444;
+}
+
+.price-test-aggregator-name {
+  font-weight: 600;
+  color: #3b82f6;
+  margin-right: 0.5rem;
+}
+
+/* 历史记录样式 */
+.history-actions {
+  margin-bottom: 1.5rem;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.history-day {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.history-day-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.history-section {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.history-section:last-child {
+  margin-bottom: 0;
+}
+
+.history-label {
+  font-weight: 600;
+  min-width: 60px;
+  flex-shrink: 0;
+}
+
+.history-label.added {
+  color: #10b981;
+}
+
+.history-label.deleted {
+  color: #ef4444;
+}
+
+.history-projects {
+  color: #4b5563;
+  flex: 1;
+  word-break: break-word;
+}
+
+.history-projects-list {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.history-project-link {
+  color: #3b82f6;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  background-color: #eff6ff;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.history-project-link:hover {
+  background-color: #dbeafe;
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.history-empty {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+/* ==================== 聪明钱样式 ==================== */
+
+.smart-money-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.smart-money-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.smart-money-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.smart-money-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.smart-money-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: #f9fafb;
+  transition: background-color 0.2s;
+}
+
+.smart-money-header:hover {
+  background-color: #f3f4f6;
+}
+
+.smart-money-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.smart-money-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #111827;
+}
+
+.smart-money-level {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.smart-money-level.level-important {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.smart-money-level.level-smart {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.smart-money-level.level-ant {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.smart-money-address {
+  font-family: monospace;
+  font-size: 0.875rem;
+  color: #6b7280;
+  word-break: break-all;
+}
+
+.smart-money-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s;
+}
+
+.btn-icon:hover {
+  background-color: #e5e7eb;
+}
+
+.toggle-icon {
+  font-size: 0.75rem;
+  color: #6b7280;
+  transition: transform 0.2s;
+}
+
+.smart-money-operations {
+  padding: 1rem;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* 操作记录列表样式 */
+.operations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.operation-item {
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+  transition: background-color 0.2s;
+}
+
+.operation-item:hover {
+  background-color: #f3f4f6;
+}
+
+.operation-item.action-buy {
+  border-left: 3px solid #10b981;
+}
+
+.operation-item.action-sell {
+  border-left: 3px solid #ef4444;
+}
+
+.operation-item.action-reward {
+  border-left: 3px solid #f59e0b;
+}
+
+.operation-time {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.operation-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.operation-project {
+  font-weight: 600;
+  color: #111827;
+}
+
+.operation-project a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.operation-project a:hover {
+  text-decoration: underline;
+}
+
+.operation-action {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.operation-item.action-buy .operation-action {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.operation-item.action-sell .operation-action {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.operation-amount,
+.operation-yield,
+.operation-profit {
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.amount-value {
+  font-weight: 700;
+  color: #2563eb;
+  font-size: 1rem;
+}
+
+.yield-value {
+  font-weight: 700;
+  color: #dc2626;
+  font-size: 1rem;
+}
+
+.operation-profit {
+  font-weight: 600;
+  color: #059669;
+}
+
+.smart-money-address a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.smart-money-address a:hover {
+  text-decoration: underline;
+}

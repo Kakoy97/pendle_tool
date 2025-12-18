@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pendle Tool - 监控管理</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+      <header>
+        <h1>Pendle Tool</h1>
+        <div class="header-actions">
+          <span id="last-sync-time" class="last-sync-time"></span>
+          <button id="sync-projects" class="btn-secondary">同步项目</button>
+        </div>
+      </header>
+    <main>
+      <nav class="tabs">
+        <button class="tab-btn active" data-tab="management">管理中心</button>
+        <button class="tab-btn" data-tab="price-test">价格测试</button>
+        <button class="tab-btn" data-tab="history">历史记录</button>
+        <button class="tab-btn" data-tab="smart-money">聪明钱</button>
+      </nav>
+      
+      <!-- 管理中心标签页 -->
+      <section id="management-tab" class="tab-content active">
+        <div class="projects-container">
+            <!-- 分组管理工具栏 -->
+            <div class="group-toolbar">
+              <input type="text" id="new-group-name" placeholder="输入新分组名称" class="group-input">
+              <button id="create-group-btn" class="btn-primary">创建分组</button>
+              <button id="edit-mode-btn" class="btn-secondary">修改</button>
+              <button id="save-changes-btn" class="btn-success" style="display: none;">保存</button>
+              <button id="clear-projects-btn" class="btn-danger">清空数据</button>
+            </div>
+          
+          <!-- 正在监控的项目 -->
+          <section class="project-section">
+            <div class="section-header">
+              <h2>正在监控的项目</h2>
+              <input type="text" id="monitored-search" class="search-input" placeholder="搜索项目或分组...">
+            </div>
+            <div id="monitored-projects" class="project-list">
+              <p class="loading">加载中...</p>
+            </div>
+          </section>
+          
+          <!-- 未监控的项目 -->
+          <section class="project-section">
+            <div class="section-header">
+              <h2>未监控的项目</h2>
+              <input type="text" id="unmonitored-search" class="search-input" placeholder="搜索项目或分组...">
+            </div>
+            <div id="unmonitored-projects" class="project-list">
+              <p class="loading">加载中...</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      
+      <!-- 价格测试标签页 -->
+      <section id="price-test-tab" class="tab-content">
+        <div class="price-test-actions">
+          <button id="stop-auto-update-btn" class="btn-danger">停止自动更新</button>
+          <span id="price-test-status" class="price-test-status"></span>
+        </div>
+        <section id="price-test-results" class="price-test-results"></section>
+      </section>
+      
+      <!-- 历史记录标签页 -->
+      <section id="history-tab" class="tab-content">
+        <div class="history-actions">
+          <button id="reload-history-btn" class="btn-primary">刷新历史记录</button>
+        </div>
+        <section id="history-list" class="history-list"></section>
+      </section>
+      
+      <!-- 聪明钱标签页 -->
+      <section id="smart-money-tab" class="tab-content">
+        <div class="smart-money-actions">
+          <button id="add-smart-money-btn" class="btn-primary">添加聪明钱</button>
+          <button id="reload-smart-money-btn" class="btn-secondary">刷新列表</button>
+        </div>
+        <section id="smart-money-list" class="smart-money-list"></section>
+      </section>
+    </main>
+    <script src="/static/app.js" type="module"></script>
+  </body>
+</html>

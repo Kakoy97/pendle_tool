@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Database
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# Telegram session files
+.telegram/
+*.session
+*.session-journal
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+python
+
+# Large data files (if not needed in repo)
+assets_response.json  # API 响应缓存文件，不需要版本控制
+
