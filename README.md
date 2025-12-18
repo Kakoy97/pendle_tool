@@ -167,23 +167,11 @@ python -m scripts.reset_db
 
 ## 启动应用
 
-### 开发模式（带热重载）
-
 ```bash
 cd backend
 uvicorn app.main:app --reload
 ```
 
-### 生产模式
-
-```bash
-cd backend
-uvicorn app.main:app --host 0.0.0.0 --port 8000
-```
-
-启动后：
-- 后端 API：http://127.0.0.1:8000/api
-- API 文档：http://127.0.0.1:8000/docs
 - 前端界面：http://127.0.0.1:8000/
 
 ## 功能说明
