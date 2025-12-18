@@ -85,6 +85,32 @@ button {
   background: #059669;
 }
 
+.btn-twitter {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: #000000;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  white-space: nowrap;
+}
+
+.btn-twitter:hover {
+  background: #333333;
+  color: white;
+  text-decoration: none;
+}
+
+.btn-twitter svg {
+  flex-shrink: 0;
+}
+
 main {
   flex: 1;
   padding: 2rem;
