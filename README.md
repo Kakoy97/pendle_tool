@@ -44,7 +44,7 @@ pendle-tool/
 ### 2. 克隆项目
 
 ```bash
-git clone <repository-url>
+git clone git@github.com:Kakoy97/pendle_tool.git
 cd pendle-tool-github
 ```
 
